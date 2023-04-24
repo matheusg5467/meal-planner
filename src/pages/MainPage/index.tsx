@@ -1,10 +1,7 @@
 import { Container } from "./styles";
-
 import { AddButton } from "../../components/AddButton";
 import { Title } from "../../components/Title";
-import { Ingredient } from "../../components/Ingredient";
-import { Meal } from "../../components/Meal";
-import { NutritionalData } from "../../components/NutritionalData";
+import { MealsWrapper } from "../../components/MealsWrapper";
 
 export function MainPage() {
     return (
@@ -15,7 +12,7 @@ export function MainPage() {
             <AddButton>
                 { "Add New Meal" }
             </AddButton>
-            <Meal />
+            <MealsWrapper />
         </Container>
     )
 }

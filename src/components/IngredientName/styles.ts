@@ -9,7 +9,7 @@ export const Container = styled.h3`
     font-weight: 700;
 
     height: 4rem;
-    width: 12rem;
+    width: 22rem;
 
     vertical-align: middle;
     text-align: center;

@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 
-export function Ingredient({ ingredientName }) {
+export function InputAmount() {
     return (
         <Container>
-           { ingredientName } 
+
         </Container>
     )
 }

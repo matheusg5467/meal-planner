@@ -1,10 +1,9 @@
-import { Meal } from "../Meal";
 import { Container } from "./styles";
 
-export function MealsWrapper() {
+export function IngredientName({ ingredientName }) {
     return (
         <Container>
-            <Meal/>
+           { ingredientName } 
         </Container>
     )
 }

@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 import { Title } from "../Title";
-import { Ingredient } from "../Ingredient";
+import { IngredientWrapper } from "../IngredientWrapper";
 import { NutritionalData } from "../NutritionalData";
 
 export function Meal() {
@@ -9,8 +9,8 @@ export function Meal() {
             <Title>
                 Meal
             </Title>
-                <NutritionalData protein={10} carbohydrates={10} fat={10}/>
-            <Ingredient ingredientName={"Chicken"}/>
+            <NutritionalData protein={10} carbohydrates={10} fat={10}/>
+            <IngredientWrapper ingredientName={"Broccoli"} ingredientAmount={500 + "g"}/>
         </Container>
     );
 }

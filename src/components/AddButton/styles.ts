@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-    
+    grid-area: button;    
+    align-self: center;
+
     display: flex;
     align-items: center;
 
@@ -13,6 +15,7 @@ export const Container = styled.button`
     border: none;
     border-radius: 3rem;
     
+    margin-left: 5rem;
     padding: 0.7rem 2.6rem 0.7rem 2.6rem;
 
     > svg {

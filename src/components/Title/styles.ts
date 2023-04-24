@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.h1`
+    grid-area: ${({ isHeader }) => isHeader && "header"}; 
     background-color: ${({ theme }) => theme.colors.BLUE_TITLE};
     color: ${({ theme }) => theme.colors.GRAY_TEXT};
 
