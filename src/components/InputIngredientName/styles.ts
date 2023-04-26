@@ -5,7 +5,7 @@ export const Container = styled.form`
     align-items: center;
 
     height : 4rem;
-    width: 20rem;
+    width: 30rem;
 
     background-color: ${({ theme }) => theme.colors.RED_ELEMENT};
     color; ${({ theme }) => theme.colors.GRAY_TEXT};

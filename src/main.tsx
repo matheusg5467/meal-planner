@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from "./styles/global"
 import theme from "./styles/theme"
-
+import { BuildPage } from './pages/BuildPage'
 import { MainPage } from "./pages/MainPage"
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <MainPage />
+        <BuildPage />
     </ThemeProvider>
   </React.StrictMode>,
 )

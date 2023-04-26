@@ -12,5 +12,7 @@ export const Container = styled.div`
         "button staples"
         "content staples"; 
 
+    background-color: ${({ theme }) => theme.colors.WHITE_BACKGROUND};
+
     padding: 6rem 6rem 10rem 11rem; 
 `
