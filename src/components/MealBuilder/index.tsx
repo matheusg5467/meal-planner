@@ -1,6 +1,6 @@
 import { Container } from "./styles";
-import { InputMealName } from "../InputMealName"; 
-import { InputWrapper } from "../InputWrapper";
+import { InputMealName } from "../input-ingredients/InputMealName"; 
+import { InputWrapper } from "../input-ingredients/InputWrapper";
 
 export function MealBuilder() {
     return (

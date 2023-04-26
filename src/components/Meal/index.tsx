@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 import { Title } from "../Title";
-import { IngredientWrapper } from "../IngredientWrapper";
+import { IngredientWrapper } from "../meal-ingredients/IngredientWrapper";
 import { NutritionalData } from "../NutritionalData";
 
 export function Meal() {
