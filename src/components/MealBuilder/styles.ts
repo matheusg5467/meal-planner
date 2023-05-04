@@ -8,7 +8,7 @@ export const Container = styled.div`
 
     background-color: ${({ theme }) => theme.colors.YELLOW_ELEMENT};
     height: 45rem;
-    width: 80rem;
+    width: 90rem;
 
     border-radius: 3rem;
 

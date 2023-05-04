@@ -1,6 +1,10 @@
 import { Container } from "./styles";
 
-export function IngredientName({ ingredientName }) {
+type IngredientNameProps = {
+    ingredientName: string;
+}
+
+export function IngredientName({ ingredientName }: IngredientNameProps) {
     return (
         <Container>
            { ingredientName } 
