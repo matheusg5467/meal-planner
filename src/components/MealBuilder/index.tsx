@@ -44,7 +44,6 @@ export function MealBuilder() {
                 handleAmountChange={handleAmountChange}
                 addIngredient={addIngredient} 
             />
-            <IngredientWrapper id={0} ingredientName={"Broccoli"} ingredientAmount={"500"}/>
             <div className="list">
                 {ingredientsList.map((ingredient) => {
                     return (

@@ -11,8 +11,8 @@ type InputWrapperProps = {
 export function InputWrapper({ handleNameChange, handleAmountChange, addIngredient }: InputWrapperProps) {
     return (
         <Container>
-            <input className="input-name" onChange={handleNameChange}/>
-            <input className="input-amount" onChange={handleAmountChange}/>
+            <input className="input-name" placeholder="Insert Ingredient Name" onChange={handleNameChange}/>
+            <input className="input-amount" placeholder="Insert Amount" onChange={handleAmountChange}/>
             <button className="button-add-meal" onClick={addIngredient}>
                <FiPlus /> 
             </button>

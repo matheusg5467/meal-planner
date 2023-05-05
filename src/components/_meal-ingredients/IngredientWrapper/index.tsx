@@ -1,6 +1,4 @@
 import { Container } from "./styles";
-import { IngredientName } from "../IngredientName"; 
-import { IngredientAmount } from "../IngredientAmount";
 
 type IngredientWrapperProps = {
     id: number;
@@ -11,8 +9,12 @@ type IngredientWrapperProps = {
 export function IngredientWrapper({ id, ingredientName, ingredientAmount }: IngredientWrapperProps) {
     return (
         <Container>
-            <IngredientName ingredientName={ingredientName}/>
-            <IngredientAmount ingredientAmount={ingredientAmount}/>
+            <h3 className="name">
+                { ingredientName }
+            </h3>
+            <h3 className="amount">
+                { ingredientAmount }
+            </h3>
         </Container>
     )
 }

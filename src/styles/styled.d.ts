@@ -12,6 +12,8 @@ declare module 'styled-components' {
             GREEN_BUTTON: string;
             GRAY_BUTTON: string;
 
+            WHITE_ELEMENT: string;
+            GRAY_ELEMENT: string;
             YELLOW_ELEMENT: string;
             RED_ELEMENT: string; 
             BLUE_ELEMENT: string; 
