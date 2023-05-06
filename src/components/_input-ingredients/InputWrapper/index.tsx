@@ -13,7 +13,7 @@ export function InputWrapper({ handleNameChange, handleAmountChange, addIngredie
         <Container>
             <input className="input-name" placeholder="Insert Ingredient Name" onChange={handleNameChange}/>
             <input className="input-amount" placeholder="Insert Amount" onChange={handleAmountChange}/>
-            <button className="button-add-meal" onClick={addIngredient}>
+            <button className="button-add-ingredient" onClick={addIngredient}>
                <FiPlus /> 
             </button>
         </Container>

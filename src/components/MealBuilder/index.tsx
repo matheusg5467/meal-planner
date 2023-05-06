@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { useState, ChangeEvent } from "react";
 import { InputMealName } from "../_input-ingredients/InputMealName"; 
 import { InputWrapper } from "../_input-ingredients/InputWrapper";
-import { IngredientWrapper } from "../_meal-ingredients/IngredientWrapper";
+import { IngredientWrapper } from "../IngredientWrapper";
 
 type ingredientType = {
     id: number;
@@ -32,9 +32,9 @@ export function MealBuilder() {
     setIngredientsList(ingredient.ingredientName !== "" ? [...ingredientsList, ingredient] : ingredientsList);
 };
 
-    /*const deleteIngredient = (id) => {
-        setIngredientsList(ingredientsList.filter((ingredient) => ingredient.id !== ingredient));
-    };*/
+    const deleteIngredient = (id: number) => {
+        setIngredientsList(ingredientsList.filter((ingredient) => ingredient.id !== id));
+    };
 
     return (
         <Container>
@@ -51,6 +51,7 @@ export function MealBuilder() {
                             id={ingredient.id}
                             ingredientName={ingredient.ingredientName}
                             ingredientAmount={ingredient.ingredientAmount}
+                            deleteIngredient={deleteIngredient}
                         />
                     );
                 })}        

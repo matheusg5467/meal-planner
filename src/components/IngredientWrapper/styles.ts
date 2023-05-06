@@ -47,4 +47,26 @@ export const Container = styled.div`
 
         padding: 1rem;
     }
+
+    > .button-delete-ingredient {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        background: ${({ theme }) => theme.colors.RED_ELEMENT};
+
+        heigth: 4rem;
+        width: 4rem;
+
+        border: none;
+        border-radius: 1rem;
+
+        padding: 0.7rem;
+
+        > svg {
+            color: ${({ theme }) => theme.colors.GRAY_TEXT};
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+    }
 `

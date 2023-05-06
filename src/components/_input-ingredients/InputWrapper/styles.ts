@@ -47,7 +47,7 @@ export const Container = styled.div`
         border-radius: 1rem; 
     }
 
-    > .button-add-meal {
+    > .button-add-ingredient {
         display: flex;
         align-items: center;
         justify-items: center;
@@ -68,4 +68,4 @@ export const Container = styled.div`
             font-weight: 700;
         }
     }
-    `
+`
