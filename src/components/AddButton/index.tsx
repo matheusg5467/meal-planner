@@ -7,7 +7,7 @@ type AddButtonProps = {
 
 export function AddButton({ children }: AddButtonProps) {
     return (
-        <Container>
+        <Container to="/build">
             <FiPlus />
             <h2>
                 { children }

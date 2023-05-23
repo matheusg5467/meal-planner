@@ -13,4 +13,30 @@ export const Container = styled.div`
     border-radius: 3rem;
 
     padding: 2.5rem 2rem 0rem;
+
+    > .confirm-meal-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+
+        background: ${({ theme }) => theme.colors.GREEN_BUTTON};
+        color: ${({ theme }) => theme.colors.GRAY_TEXT};
+
+        font-size: 1.4rem;
+
+        heigth: 8rem;
+        width: 16rem;
+
+        border: none;
+        border-radius: 1rem;
+
+        padding: 0.7rem;
+
+        > svg {
+            color: ${({ theme }) => theme.colors.GRAY_TEXT};
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+    }
 ` 

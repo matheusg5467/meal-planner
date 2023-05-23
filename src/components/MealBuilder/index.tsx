@@ -3,6 +3,7 @@ import { useState, ChangeEvent } from "react";
 import { InputMealName } from "../_input-ingredients/InputMealName"; 
 import { InputWrapper } from "../_input-ingredients/InputWrapper";
 import { IngredientWrapper } from "../IngredientWrapper";
+import { FiCheck } from "react-icons/fi";
 
 type ingredientType = {
     id: number;
@@ -56,6 +57,10 @@ export function MealBuilder() {
                     );
                 })}        
             </div>
+            <button className="confirm-meal-button"> 
+                CONFIRM MEAL
+                <FiCheck/>
+            </button>
         </Container>
     );
 }
