@@ -1,9 +1,11 @@
 import { Container } from "./styles";
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useContext } from "react";
 import { InputMealName } from "../_input-ingredients/InputMealName"; 
 import { InputWrapper } from "../_input-ingredients/InputWrapper";
 import { IngredientWrapper } from "../IngredientWrapper";
 import { FiCheck } from "react-icons/fi";
+
+import { MealsListContext } from "../../context/MealsListContext";
 
 type ingredientType = {
     id: number;
@@ -12,6 +14,8 @@ type ingredientType = {
 }
 
 export function MealBuilder() {
+    const {mealsList, newMeal, setNewMeal, addMeal} = useContext(MealsListContext)
+
     const [ingredientsList, setIngredientsList] = useState<ingredientType[]>([]);
     const [newIngredientName, setNewIngredientName] = useState<string>("");
     const [newIngredientAmount, setNewIngredientAmount] = useState<string>("");
@@ -31,11 +35,18 @@ export function MealBuilder() {
             ingredientAmount: newIngredientAmount,
         };
     setIngredientsList(ingredient.ingredientName !== "" ? [...ingredientsList, ingredient] : ingredientsList);
+    setNewMeal(ingredientsList)
 };
 
     const deleteIngredient = (id: number) => {
         setIngredientsList(ingredientsList.filter((ingredient) => ingredient.id !== id));
     };
+
+    const handleConfirmClick = () => {
+        console.log(ingredientsList)
+        console.log(newMeal)
+        addMeal()
+    }
 
     return (
         <Container>
@@ -57,7 +68,7 @@ export function MealBuilder() {
                     );
                 })}        
             </div>
-            <button className="confirm-meal-button"> 
+            <button className="confirm-meal-button" onClick={handleConfirmClick}> 
                 CONFIRM MEAL
                 <FiCheck/>
             </button>
