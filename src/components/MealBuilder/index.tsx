@@ -45,12 +45,11 @@ export function MealBuilder() {
     };
 
     const handleConfirmClick = () => {
-        addMeal() //mealsList not updating
+        addMeal();
     }
 
     return (
         <Container>
-            <InputMealName/>
             <InputWrapper
                 handleNameChange={handleNameChange}
                 handleAmountChange={handleAmountChange}
