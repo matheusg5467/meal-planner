@@ -9,6 +9,17 @@ export function MealsWrapper() {
     const { mealsList } = useContext(MealsListContext)
     return (
         <Container>
+           {mealsList.map((meal) => {
+               return (meal.map((ingredient) => {
+                    return (
+                        <IngredientWrapper
+                            id={ingredient.id}
+                            ingredientName={ingredient.ingredientName}
+                            ingredientAmount={ingredient.ingredientAmount}
+                        />
+                        );
+                    }));
+            })};
         </Container>
     )
 }

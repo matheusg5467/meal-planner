@@ -3,7 +3,8 @@ import { useState, ChangeEvent, useContext } from "react";
 import { InputMealName } from "../_input-ingredients/InputMealName"; 
 import { InputWrapper } from "../_input-ingredients/InputWrapper";
 import { IngredientWrapper } from "../IngredientWrapper";
-import { FiCheck } from "react-icons/fi";
+import { FiCheck, FiArrowUpLeft } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 import { MealsListContext } from "../../context/MealsListContext";
 
@@ -34,18 +35,17 @@ export function MealBuilder() {
             ingredientName: newIngredientName,
             ingredientAmount: newIngredientAmount,
         };
-    setIngredientsList(ingredient.ingredientName !== "" ? [...ingredientsList, ingredient] : ingredientsList);
-    setNewMeal(ingredientsList)
-};
+        
+        setIngredientsList(ingredient.ingredientName !== "" ? [...ingredientsList, ingredient] : ingredientsList);
+        setNewMeal(ingredient.ingredientName !== "" ? [...ingredientsList, ingredient] : ingredientsList)
+    };
 
     const deleteIngredient = (id: number) => {
         setIngredientsList(ingredientsList.filter((ingredient) => ingredient.id !== id));
     };
 
     const handleConfirmClick = () => {
-        console.log(ingredientsList)
-        console.log(newMeal)
-        addMeal()
+        addMeal() //mealsList not updating
     }
 
     return (
@@ -72,6 +72,9 @@ export function MealBuilder() {
                 CONFIRM MEAL
                 <FiCheck/>
             </button>
+            <Link to="/">
+                <FiArrowUpLeft />
+            </Link>
         </Container>
     );
 }
