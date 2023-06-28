@@ -1,8 +1,12 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, ReactNode } from "react";
 
 export const MealsListContext = createContext([]);
 
-export const MealsListProvider = ({ children })  => {
+type MealsListProviderProps = {
+    children: ReactNode
+}
+
+export const MealsListProvider = ({ children }: MealsListProviderProps)  => {
     const [mealsList, setMealsList] = useState([]);
     const [newMeal, setNewMeal] = useState([]);
 

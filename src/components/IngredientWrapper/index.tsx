@@ -5,7 +5,7 @@ type IngredientWrapperProps = {
     id: number;
     ingredientName: string;
     ingredientAmount: string;
-    deleteIngredient: (id: number) => void;
+    deleteIngredient?: (id: number) => void;
 };
 
 export function IngredientWrapper({ id, ingredientName, ingredientAmount, deleteIngredient }: IngredientWrapperProps) {
